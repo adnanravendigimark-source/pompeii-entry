@@ -15,33 +15,33 @@ const config: Config = {
         // chichen/navy) are unchanged from the Chichen Itza repo this
         // project was cloned from — only the values they resolve to changed.
         stone: {
-          50: "#F5EDE1",   // Travertine Cream
-          100: "#EFE3D2",
-          200: "#DFC9A8",  // Warm Sand
-          800: "#3A312A",
-          900: "#2B2420",  // Volcanic Ash Charcoal
+          50: "#FAF9F6",   // Clean Italian Alabaster
+          100: "#F3EFE6",  // Soft Stone
+          200: "#E8E2D5",  // Roman Sand
+          800: "#2F3B20",
+          900: "#243010",  // Deep Roman Olive Slate
         },
         gold: {
-          400: "#D9A066",
-          500: "#C9932E",  // Roman Ochre Gold ⭐
-          600: "#A87720",
+          400: "#C99E4B",
+          500: "#B58A38",  // Roman Ochre Gold ⭐
+          600: "#9E762E",
         },
         emerald: {
-          900: "#2B2420",  // Volcanic Ash Charcoal
-          800: "#5C2E1E",
-          700: "#A8432B",  // Terracotta ⭐
+          900: "#243010",  // Deep Roman Olive
+          800: "#36451B",
+          700: "#A8432B",  // Pompeian Terracotta ⭐
         },
         maya: {
           forest: "rgb(var(--color-maya-forest) / <alpha-value>)",
           jungle: "rgb(var(--color-maya-jungle) / <alpha-value>)",
           ivory: "rgb(var(--color-maya-ivory) / <alpha-value>)",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
-          sand: "#DFC9A8",
-          sage: "#E8D9C4",
+          sand: "#E8E2D5",
+          sage: "#E2E8D8",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
           white: "#FFFFFF",
           emerald: "rgb(var(--color-maya-emerald) / <alpha-value>)",
-          dark: "#2B2420",
+          dark: "#243010",
         },
         // Compatibility aliases for site components
         chichen: {
@@ -49,13 +49,13 @@ const config: Config = {
           ottoman: "#A8432B",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
-          ivory: "#F5EDE1",
-          sky: "#E8D9C4",
-          sand: "#DFC9A8",
+          ivory: "#FAF9F6",
+          sky: "#F3EFE6",
+          sand: "#E8E2D5",
         },
         navy: {
-          900: "#2B2420",
-          800: "#A8432B",
+          900: "#243010",
+          800: "#36451B",
         },
       },
       fontFamily: {

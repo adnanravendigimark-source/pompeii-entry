@@ -147,7 +147,18 @@ export interface CtaBannerSection {
   buttonHref: string;
 }
 
+export interface HeroTrustBadge {
+  icon: string;
+  title: string;
+  subtitle: string;
+}
+
+export interface HeroTrustSection {
+  badges: HeroTrustBadge[];
+}
+
 export interface HomepageSections {
+  heroTrust: HeroTrustSection;
   tours: TourSection;
   highlights: HighlightsSection;
   why: WhySection;
@@ -223,9 +234,9 @@ export const DEFAULT_HEADER: HeaderContent = {
   logoImage: "",
   logoAlt: "Pompeii Entry Tickets",
   logoLine1: "POMPEII",
-  logoLine2: "— TICKETS —",
+  logoLine2: "ENTRY TICKETS",
   homeLabel: "Home",
-  bookNowText: "BOOK NOW",
+  bookNowText: "BOOK TICKETS",
   navLinks: [
     { label: "Home", href: "/" },
     { label: "Tickets", href: "/#tours" },
@@ -270,13 +281,34 @@ export const DEFAULT_FOOTER: FooterContent = {
 };
 
 export const DEFAULT_THEME: ThemeColors = {
-  primary: "#C9932E",   // Roman Ochre Gold ⭐
+  primary: "#B58A38",   // Roman Ochre Gold ⭐
   secondary: "#A8432B", // Terracotta ⭐
-  dark: "#2B2420",      // Volcanic Ash Charcoal
-  accent: "#D9A066",    // Warm Amber/Sand
+  dark: "#243010",      // Deep Roman Olive Slate
+  accent: "#C99E4B",    // Warm Amber/Gold
+};
+
+export const DEFAULT_HERO_TRUST: HeroTrustSection = {
+  badges: [
+    {
+      icon: "ShieldCheckIcon",
+      title: "Official Tickets",
+      subtitle: "100% official & secure",
+    },
+    {
+      icon: "ClockIcon",
+      title: "Skip the Line",
+      subtitle: "Save time, enjoy more",
+    },
+    {
+      icon: "HeadsetIcon",
+      title: "24/7 Support",
+      subtitle: "We're here to help",
+    },
+  ],
 };
 
 export const DEFAULT_SECTIONS: HomepageSections = {
+  heroTrust: DEFAULT_HERO_TRUST,
   tours: {
     eyebrow: "Pompeii Entry Tickets & Guided Tours",
     heading: "Pompeii Entry Tickets and Guided Tour",
@@ -533,6 +565,7 @@ function rowToHomepage(row: any): HomepageContent {
     featuredUrgencyText: row.featured_urgency_text || "",
     featuredReasons: parseReasons(row.featured_reasons),
     sections: {
+      heroTrust: { ...DEFAULT_SECTIONS.heroTrust, ...sectionsRaw.heroTrust },
       tours: { ...DEFAULT_SECTIONS.tours, ...sectionsRaw.tours },
       highlights: { ...DEFAULT_SECTIONS.highlights, ...sectionsRaw.highlights },
       why: { ...DEFAULT_SECTIONS.why, ...sectionsRaw.why },

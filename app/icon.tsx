@@ -13,41 +13,35 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #2B2420 0%, #042017 100%)",
+          background: "#243010",
           borderRadius: "14px",
-          border: "2.5px solid #C9932E",
+          border: "2.5px solid #B58A38",
           boxSizing: "border-box",
         }}
       >
         <svg
-          width="54"
-          height="54"
+          width="48"
+          height="48"
           viewBox="0 0 64 64"
           fill="none"
         >
-          {/* Sun Radiance */}
-          <circle cx="32" cy="18" r="9" fill="#C9932E" fillOpacity="0.25" />
-          <path d="M32 6V9M24 8L25.5 11M40 8L38.5 11M17 13L20 15M47 13L44 15" stroke="#C9932E" strokeWidth="1.5" strokeLinecap="round" />
+          {/* Classical Roman Temple Pediment (Roof) */}
+          <path d="M32 14L52 24H12L32 14Z" fill="#B58A38" />
+          <path d="M32 17.5L47 23H17L32 17.5Z" fill="#243010" fillOpacity="0.35" />
 
-          {/* Temple Summit Chamber */}
-          <rect x="27" y="18" width="10" height="6" rx="0.5" fill="#C9932E" stroke="#C9932E" strokeWidth="1" />
-          <rect x="30" y="20" width="4" height="4" fill="#2B2420" />
+          {/* Horizontal Entablature Architrave Bar */}
+          <rect x="12" y="25" width="40" height="3" rx="0.5" fill="#FAF9F6" />
 
-          {/* Terraced Stepped Pyramid Tiers */}
-          <path d="M23 24L20 29H44L41 24H23Z" fill="#C9932E" fillOpacity="0.45" stroke="#C9932E" strokeWidth="1.2" />
-          <path d="M19 29L16 35H48L45 29H19Z" fill="#C9932E" fillOpacity="0.6" stroke="#C9932E" strokeWidth="1.2" />
-          <path d="M15 35L11 42H53L49 35H15Z" fill="#C9932E" fillOpacity="0.75" stroke="#C9932E" strokeWidth="1.2" />
-          <path d="M10 42L6 50H58L54 42H10Z" fill="#C9932E" stroke="#C9932E" strokeWidth="1.4" />
+          {/* 4 Classical Fluted Columns */}
+          <rect x="15.5" y="29.5" width="4.5" height="15" rx="0.5" fill="#FAF9F6" />
+          <rect x="24.5" y="29.5" width="4.5" height="15" rx="0.5" fill="#FAF9F6" />
+          <rect x="35" y="29.5" width="4.5" height="15" rx="0.5" fill="#FAF9F6" />
+          <rect x="44" y="29.5" width="4.5" height="15" rx="0.5" fill="#FAF9F6" />
 
-          {/* Central Grand Ceremonial Staircase */}
-          <path d="M28 24L26 50H38L36 24H28Z" fill="#C9932E" stroke="#2B2420" strokeWidth="1.2" />
-          <line x1="27.5" y1="29" x2="36.5" y2="29" stroke="#2B2420" strokeWidth="1" />
-          <line x1="27" y1="34" x2="37" y2="34" stroke="#2B2420" strokeWidth="1" />
-          <line x1="26.5" y1="39" x2="37.5" y2="39" stroke="#2B2420" strokeWidth="1" />
-          <line x1="26" y1="44" x2="38" y2="44" stroke="#2B2420" strokeWidth="1" />
-
-          {/* Base Ground Line */}
-          <path d="M4 51H60" stroke="#C9932E" strokeWidth="2.5" strokeLinecap="round" />
+          {/* Upper Stepped Base */}
+          <rect x="13.5" y="45.5" width="37" height="2.5" rx="0.5" fill="#B58A38" />
+          {/* Lower Stepped Base Platform */}
+          <rect x="10.5" y="48.5" width="43" height="3" rx="0.5" fill="#FAF9F6" />
         </svg>
       </div>
     ),

@@ -20,6 +20,7 @@ import type {
   HoursRow,
   GalleryImage,
   HighlightCard,
+  HeroTrustBadge,
 } from "@/lib/homepage";
 import type { Tour } from "@/lib/data";
 
@@ -180,6 +181,17 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
 
   function updateTheme(patch: Partial<HomepageContent["theme"]>) {
     setContent((c) => ({ ...c, theme: { ...c.theme, ...patch } }));
+    setSaved(false);
+  }
+
+  function updateHeroTrust(patch: Partial<HomepageContent["sections"]["heroTrust"]>) {
+    setContent((c) => ({
+      ...c,
+      sections: {
+        ...c.sections,
+        heroTrust: { ...c.sections.heroTrust, ...patch },
+      },
+    }));
     setSaved(false);
   }
 
@@ -421,6 +433,34 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 <input value={content.heroCtaSecondaryHref} onChange={(e) => update("heroCtaSecondaryHref", e.target.value)} className={inputClass} />
               </Field>
             </div>
+
+            <Field
+              label="Hero Trust Badges (e.g. Official Tickets, Skip the Line, 24/7 Support)"
+              hint="The key trust indicators displayed below the hero description."
+            >
+              <RepeatableList<HeroTrustBadge>
+                items={content.sections.heroTrust?.badges || []}
+                onChange={(badges) => updateHeroTrust({ badges })}
+                newItem={() => ({ icon: "ShieldCheckIcon", title: "New Trust Badge", subtitle: "Badge description" })}
+                addLabel="+ Add trust badge"
+                renderItem={(badge, upd) => (
+                  <div className="grid gap-2 sm:grid-cols-2">
+                    <input
+                      value={badge.title}
+                      onChange={(e) => upd({ ...badge, title: e.target.value })}
+                      placeholder="Title (e.g. Official Tickets)"
+                      className={inputClass}
+                    />
+                    <input
+                      value={badge.subtitle}
+                      onChange={(e) => upd({ ...badge, subtitle: e.target.value })}
+                      placeholder="Subtitle (e.g. 100% official & secure)"
+                      className={inputClass}
+                    />
+                  </div>
+                )}
+              />
+            </Field>
           </SectionCard>
 
           <SectionCard

@@ -19,28 +19,21 @@ html {
 }
 
 body {
-  background-color: #F5EDE1;
-  color: #2B2420;
+  background-color: #FAF9F6;
+  color: #243010;
 }
 
 /* Default brand-color CSS variables — space-separated RGB triplets.
-   Pompeii palette: terracotta/brick red (excavated ruin walls) as the
-   main brand/CTA color, Roman ochre gold as the accent, and volcanic
-   ash charcoal for dark text/backgrounds. --color-maya-emerald gets its
-   OWN variable (not aliased to --color-maya-forest) so that the admin
-   theme editor's "Secondary" color control — which writes to
-   --color-maya-emerald via buildThemeStyle() in app/layout.tsx — actually
-   takes effect on every maya-emerald-styled element (TopRides/WhyBookWithUs
-   etc.). Aliasing it to --color-maya-forest instead was a real bug found
-   across the sibling repos cloned from this same base template. */
+   Pompeii palette: deep Roman olive slate for dark text/backgrounds,
+   Roman ochre gold as the accent, and clean Italian alabaster for page backgrounds. */
 :root {
-  --color-maya-forest: 43 36 32; /* #2B2420 - Volcanic Ash Charcoal */
-  --color-maya-jungle: 168 67 43; /* #A8432B - Terracotta (lighter use) */
-  --color-maya-ivory: 245 237 225; /* #F5EDE1 - Travertine Cream */
-  --color-maya-gold: 201 147 46; /* #C9932E - Roman Ochre Gold ⭐ */
-  --color-maya-charcoal: 43 36 32; /* #2B2420 - Volcanic Ash Charcoal */
-  --color-gold-400: 217 160 102; /* #D9A066 - warm amber/sand accent */
-  --color-maya-emerald: 168 67 43; /* #A8432B - Terracotta ⭐ (main brand/CTA color) */
+  --color-maya-forest: 36 48 16; /* #243010 - Deep Roman Olive Slate */
+  --color-maya-jungle: 168 67 43; /* #A8432B - Terracotta */
+  --color-maya-ivory: 250 249 246; /* #FAF9F6 - Clean Italian Alabaster */
+  --color-maya-gold: 181 138 56; /* #B58A38 - Roman Ochre Gold ⭐ */
+  --color-maya-charcoal: 36 48 16; /* #243010 - Deep Roman Olive Slate */
+  --color-gold-400: 201 158 75; /* #C99E4B - Warm Roman Gold */
+  --color-maya-emerald: 168 67 43; /* #A8432B - Terracotta ⭐ */
 
   /* Compatibility aliases */
   --color-chichen-navy: var(--color-maya-forest);

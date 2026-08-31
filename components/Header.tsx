@@ -24,7 +24,7 @@ export default async function Header() {
           logoImage={header.logoImage}
           logoAlt={header.logoAlt || "Pompeii Entry Tickets"}
           line1={header.logoLine1 || "POMPEII"}
-          line2={header.logoLine2 || "— TICKETS —"}
+          line2={header.logoLine2 || "ENTRY TICKETS"}
         />
 
         <HeaderNav links={navLinks} />
@@ -32,7 +32,7 @@ export default async function Header() {
         <div className="flex items-center gap-3">
           <a
             href={ctaHref}
-            className="hidden items-center gap-2 rounded-lg bg-[#2B2420] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#A8432B] hover:shadow-md md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-[#243010] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#344417] hover:shadow-md md:inline-flex"
           >
             {/* Ticket Icon */}
             <svg

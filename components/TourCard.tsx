@@ -80,23 +80,23 @@ export default function TourCard({
 
         {/* Footer pinned to the bottom of the card regardless of content above */}
         {recommended ? (
-          <div className="mt-auto border-t border-[#C9932E]/20 pt-4">
+          <div className="mt-auto border-t border-[#B58A38]/20 pt-4">
             <div className="flex items-end justify-between gap-2">
               <div>
                 <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
-                <span className="font-display text-2xl font-bold text-stone-900">${tour.price}</span>
+                <span className="font-serif text-2xl font-bold text-stone-900">${tour.price}</span>
               </div>
               <a
                 href={tour.href}
                 target="_blank"
                 rel="noopener nofollow sponsored"
-                className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#2B2420] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#2B2420]/20 transition-all duration-300 hover:bg-[#A8432B] hover:scale-[1.02]"
+                className="flex shrink-0 items-center gap-1.5 rounded-lg bg-[#243010] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#243010]/20 transition-all duration-300 hover:bg-[#364718] hover:scale-[1.02]"
               >
                 {bookNowText}
               </a>
             </div>
             {recommended.urgencyText && (
-              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#C9932E]">
+              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#B58A38]">
                 <LockIcon className="h-3 w-3" /> {recommended.urgencyText}
               </p>
             )}
@@ -109,7 +109,7 @@ export default function TourCard({
                 {tour.originalPrice && (
                   <span className="text-sm text-stone-900/35 line-through">${tour.originalPrice}</span>
                 )}
-                <span className="font-display text-2xl font-bold text-stone-900">${tour.price}</span>
+                <span className="font-serif text-2xl font-bold text-stone-900">${tour.price}</span>
                 <span className="text-xs text-stone-900/45">/ person</span>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function TourCard({
               href={tour.href}
               target="_blank"
               rel="noopener nofollow sponsored"
-              className="rounded-lg bg-[#2B2420] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#2B2420]/20 transition-all duration-300 hover:bg-[#A8432B] hover:scale-[1.02]"
+              className="rounded-lg bg-[#243010] px-5 py-2.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-md shadow-[#243010]/20 transition-all duration-300 hover:bg-[#364718] hover:scale-[1.02]"
             >
               {bookNowText}
             </a>
