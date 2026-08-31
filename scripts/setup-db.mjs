@@ -349,7 +349,7 @@ async function addHomepageCmsColumns() {
   await sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS meta_title TEXT NOT NULL DEFAULT ''`;
   await sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS meta_description TEXT NOT NULL DEFAULT ''`;
   await sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS focus_keyword TEXT NOT NULL DEFAULT ''`;
-  // sections_json holds the "What You See", "Waterfront Palaces & Mansions",
+  // sections_json holds the "What You See", "Must-See Ruins",
   // "Practical Info", and "Price Comparison" sections — grouped into one
   // JSONB column (rather than ~30 separate columns) since they're always
   // saved together from the same admin tab and read together on every
@@ -536,7 +536,7 @@ async function seedHomepage() {
       featured_badge_label, featured_urgency_text, featured_reasons
     ) VALUES (
       1, ${h.heroBadge || ""}, ${h.heroHeading || ""}, ${h.heroSubheading || ""},
-      ${h.heroImage || "/images/chichen-itza-hero.jpg"}, ${h.heroImageAlt || ""}, ${h.ratingValue || ""}, ${h.ratingCount || ""},
+      ${h.heroImage || "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2400&auto=format&fit=crop"}, ${h.heroImageAlt || ""}, ${h.ratingValue || ""}, ${h.ratingCount || ""},
       ${!!h.showFeaturedTour}, ${h.featuredTourId || ""}, ${h.featuredBadgeLabel || ""},
       ${h.featuredUrgencyText || ""}, ${JSON.stringify(h.featuredReasons || [])}::jsonb
     )
@@ -604,9 +604,9 @@ async function seedSiteSettings() {
     console.log("site_settings: already configured — skipping seed.");
     return;
   }
-  const blogTitle = "Chichen Itza Tour Guides & Tips | Chichen Itza Tour";
+  const blogTitle = "Pompeii Guides & Tips | Pompeii Entry Tickets";
   const blogDescription =
-    "Practical guides for a Chichen Itza tour in Yucatan Mexico — early access tips, all-inclusive day tours, cenotes, and more.";
+    "Practical guides for visiting Pompeii — ticket comparisons, best time to go, what to see, and more.";
   await sql`
     INSERT INTO site_settings (id, blog_meta_title, blog_meta_description)
     VALUES (1, ${blogTitle}, ${blogDescription})
@@ -622,35 +622,35 @@ async function seedAboutPage() {
     return;
   }
   const reasons = [
-    { icon: "ShieldCheckIcon", title: "Certified Archeologist Guides", body: "Every tour we list runs with licensed INAH bilingual guides — never untrained guides or markups." },
-    { icon: "StarIcon", title: "Real Review Volume", body: "We only recommend excursions with thousands of verifiable review counts and 4.7+ star ratings." },
-    { icon: "LockIcon", title: "Transparent Pricing", body: "The price you see on the tour card is the price you pay — no hidden entrance fees or taxes added at checkout." },
-    { icon: "HeadsetIcon", title: "Honest, Clear Info", body: "We tell you exactly what is included — transport, cenote admission, buffet meals, and gear." },
+    { icon: "ShieldCheckIcon", title: "Genuine, Valid Tickets", body: "Every ticket we list is sold through an established, verified booking partner and grants real entry to Pompeii." },
+    { icon: "StarIcon", title: "Licensed Guides & Official Audio Tours", body: "Every guided option uses a licensed archaeologist or the official Pompeii audio guide — never an unofficial guide." },
+    { icon: "LockIcon", title: "Transparent Pricing", body: "What you see is what you pay: guide, audio tour, and combo-ticket inclusions are clearly stated upfront with zero hidden charges." },
+    { icon: "HeadsetIcon", title: "Free Cancellation", body: "Most tickets include flexibility with free cancellation up to 24 hours before your visit." },
   ];
   const a = {
     heroEyebrow: "About Us",
-    heroHeading: "Your Independent Guide to Chichen Itza Tours & Tickets",
+    heroHeading: "Your Independent Guide to Pompeii Entry Tickets",
     heroSubheading:
-      "We help travelers discover and book the best certified guided tours, skip-the-line admissions, and sacred cenote day trips across the Yucatan Peninsula.",
-    heroImage: "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2000&auto=format&fit=crop",
-    heroImageAlt: "El Castillo pyramid at Chichen Itza Mayan ruins",
-    introHeading: "Why We Built a Chichen Itza Tour Guide",
+      "We help travelers discover and book the best Pompeii tickets — from skip-the-line entry to guided tours and combo tours with Herculaneum and Vesuvius.",
+    heroImage: "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2000&auto=format&fit=crop",
+    heroImageAlt: "Ancient Roman ruins and forum columns",
+    introHeading: "Why We Built a Pompeii Ticket Guide",
     introParagraph1:
-      "We built this site around one belief: visiting Chichén Itzá is one of the most breathtaking cultural experiences in the world — but only if you book the right tour. With hundreds of operators in Cancun and Riviera Maya, prices and service quality vary dramatically.",
+      "We built this site around one belief: Pompeii is one of the most extraordinary archaeological sites in the world — but only if you book the right ticket. With several ticket types and multiple booking partners to choose from, prices and inclusions vary dramatically.",
     introParagraph2:
-      "We're an independent Chichen Itza tour guide — not an official government website. We compare day tours and early access tickets from licensed, established Yucatan operators, currently via GetYourGuide, and point you to the ones worth your time and money.",
-    introImage: "https://images.unsplash.com/photo-1688330393243-b7d7bc9cd3d7?q=80&w=1000&auto=format&fit=crop",
-    introImageAlt: "Temple of the Warriors and columns at Chichen Itza",
-    reasonsHeading: "How We Pick Our Chichen Itza Tours",
-    reasonsSubheading: "Every tour listed on this site is screened against four criteria before it earns a spot.",
-    disclosureHeading: "A Note on How We Earn",
+      "We are an independent booking resource — not the Parco Archeologico di Pompei or any Italian government body. We rigorously screen and compare verified skip-the-line tickets, guided tours, and combo tours with Herculaneum and Vesuvius, sold through trusted, established booking partners.",
+    introImage: "https://images.unsplash.com/photo-1768910924686-2a2bda2d8ac4?q=80&w=1000&auto=format&fit=crop",
+    introImageAlt: "Ancient Roman mosaic floor with circular patterns",
+    reasonsHeading: "How We Screen & Select Pompeii Tickets",
+    reasonsSubheading: "Every ticket featured on this site is vetted against four strict criteria before earning a recommendation.",
+    disclosureHeading: "Affiliate Disclosure",
     disclosureBody:
-      "When you book a Chichen Itza tour through a link on this site, we earn a small commission from the operator at no extra cost to you. This is how we keep the site free and independently written — it doesn't affect which tours we recommend or how we rank them.",
-    ctaText: "Ready to book your Chichen Itza tour?",
-    ctaButtonLabel: "Compare Chichen Itza Tours",
-    metaTitle: "About Us | Chichen Itza Tour & Excursion Booking Guide",
+      "When you book a Pompeii ticket through links on our site, we may earn a modest affiliate commission at zero additional cost to you. This support allows us to maintain up-to-date guides and independent comparisons.",
+    ctaText: "Ready to book your Pompeii ticket?",
+    ctaButtonLabel: "Compare Pompeii Tickets",
+    metaTitle: "About Us | Pompeii Ticket Booking Guide",
     metaDescription:
-      "Learn about our independent travel guide, how we curate certified Chichen Itza guided tours and cenote day trips from Cancun and Riviera Maya.",
+      "Learn about our independent travel guide, and how we curate the best Pompeii entry tickets, guided tours, and combo tours with Herculaneum and Vesuvius.",
   };
   await sql`
     INSERT INTO about_page (
@@ -678,25 +678,25 @@ async function seedContactPage() {
     return;
   }
   const reasons = [
-    { icon: "HeadsetIcon", title: "Tour Booking Advice", body: "Need advice choosing between the all-inclusive cenote tour, early access tour, or private VIP excursion?" },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Certified local Yucatan tour operators, DMCs, and travel partners — contact us regarding listings." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Questions about visiting hours, weather tips, transport from Cancun, or site feedback." },
+    { icon: "HeadsetIcon", title: "Ticket Booking Advice", body: "Need advice choosing between the skip-the-line entry ticket, guided tour, or Herculaneum & Vesuvius combo?" },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Verified booking partners and travel partners — contact us regarding listings." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Questions about opening hours, getting to Pompeii, or site feedback." },
   ];
   const c = {
     heroEyebrow: "Contact",
     heroHeading: "Get in Touch",
     heroSubheading:
-      "Questions about booking a Chichen Itza tour, hotel pickup logistics, or travel partnerships? Reach out directly.",
+      "Questions about booking a Pompeii ticket, guided tour, or travel partnerships? Reach out directly.",
     email: "livetravelpartner@gmail.com",
     emailNote: "We typically reply within 1–2 business days.",
-    reasonsHeading: "What we can help with",
+    reasonsHeading: "How We Can Help",
     footerNote:
       "Already have an existing booking? Please check your GetYourGuide confirmation voucher for 24/7 direct operator contact and cancellation tools.",
-    ctaHeading: "Ready to explore the Mayan ruins?",
-    ctaButtonLabel: "Compare Chichen Itza Tours & Tickets",
-    metaTitle: "Contact Us | Chichen Itza Tour & Tickets",
+    ctaHeading: "Ready to explore ancient Pompeii?",
+    ctaButtonLabel: "Compare Pompeii Tickets & Tours",
+    metaTitle: "Contact Us | Pompeii Entry Tickets",
     metaDescription:
-      "Questions about booking a Chichen Itza tour or private excursion in Yucatan Mexico? Contact our team for assistance.",
+      "Questions about booking a Pompeii entry ticket or guided tour? Contact our team for assistance.",
   };
   await sql`
     INSERT INTO contact_page (

@@ -56,7 +56,7 @@ export interface TourRecord {
   priceTableColumn1?: string;
   // Shown in the homepage price-comparison table's second feature column
   // (see components/PriceComparison.tsx and the Price section's
-  // column2Label in lib/homepage.ts) — e.g. "Yes — lunch or crêpe tasting".
+  // column2Label in lib/homepage.ts) — e.g. "Yes — licensed archaeologist guide".
   // Blank renders as "No" in that column.
   priceTableFeature?: string;
 }

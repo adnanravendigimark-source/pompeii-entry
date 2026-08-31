@@ -1,18 +1,18 @@
 {
-  "heroBadge": "STEP INTO THE WONDER OF THE MAYA WORLD",
-  "heroHeading": "Chichen Itza Tour",
-  "heroSubheading": "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences.",
-  "heroImage": "/images/chichen-itza-hero.jpg",
-  "heroImageAlt": "The iconic El Castillo pyramid at Chichen Itza Mayan ruins in sunny Yucatan",
-  "ratingValue": "4.9 / 5",
-  "ratingCount": "24,890+ verified reviews",
+  "heroBadge": "SKIP-THE-LINE ENTRY TO THE ANCIENT ROMAN CITY",
+  "heroHeading": "Pompeii Entry Tickets and Guided Tour",
+  "heroSubheading": "Book skip-the-line entry to Pompeii — the best-preserved ancient Roman city in the world — with instant mobile confirmation and free cancellation up to 24 hours before your visit.",
+  "heroImage": "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2400&auto=format&fit=crop",
+  "heroImageAlt": "Ancient Roman ruins and forum columns",
+  "ratingValue": "4.7 / 5",
+  "ratingCount": "18,400+ verified reviews",
   "showFeaturedTour": true,
-  "featuredTourId": "chichen-itza-cenote-valladolid-all-inclusive-tour",
+  "featuredTourId": "pompeii-skip-the-line-entrance-ticket-audio-guide",
   "featuredBadgeLabel": "Recommended",
   "featuredUrgencyText": "Best Price Guarantee · High Demand",
   "featuredReasons": [
-    "Most booked Chichen Itza Tour — 24,800+ reviews with 4.85-star rating",
-    "Includes certified archeologist guide, Cenote Ik Kil swim & buffet lunch",
-    "Free cancellation up to 24 hours before departure"
+    "Most booked Pompeii ticket — 18,400+ reviews with a 4.6-star rating",
+    "Skip the box office and get instant mobile ticket confirmation",
+    "Free cancellation up to 24 hours before your visit"
   ]
 }

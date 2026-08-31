@@ -21,7 +21,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
       pages={pages}
       sessionEmail={session?.email}
       sessionRole={session?.role}
-      brandName="Chichen Itza Tour"
+      brandName="Pompeii Entry Tickets"
       brandColorClass="text-chichen-gold"
       avatarColorClass="bg-chichen-charcoal"
     >

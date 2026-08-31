@@ -19,7 +19,7 @@ export default function BlogSidebar({
   toc,
   tocLabel = "In This Guide",
   relatedHeading = "Popular Guides",
-  compareLinkText = "Compare Chichen Itza Tours →",
+  compareLinkText = "Compare Pompeii Tickets & Tours →",
   recommendedBadge,
 }: {
   slug: string;
@@ -123,7 +123,7 @@ export default function BlogSidebar({
           <TicketIcon className="h-5 w-5" />
         </div>
         <p className="mt-3.5 font-display text-base font-bold text-white">
-          Compare Chichen Itza Tours &amp; Tickets
+          Compare Pompeii Tickets &amp; Tours
         </p>
         <p className="mt-1.5 text-xs leading-relaxed text-white/80">
           Find the best tour options, departure times and prices in one place.

@@ -3,7 +3,7 @@ import { getHomepageContent } from "@/lib/homepage";
 
 export default async function Hero() {
   const content = await getHomepageContent();
-  const heroImageSrc = content.heroImage || "/images/chichen-itza-hero.jpg";
+  const heroImageSrc = content.heroImage || "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2400&auto=format&fit=crop";
 
   return (
     <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-[#F5EDE1] overflow-hidden">
@@ -11,28 +11,28 @@ export default async function Hero() {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <SafeImage
           src={heroImageSrc}
-          alt={content.heroImageAlt || "The iconic El Castillo pyramid at Chichen Itza Mayan ruins in sunny Yucatan"}
+          alt={content.heroImageAlt || "Ancient Roman ruins and forum columns"}
           fill
           priority
           quality={95}
           sizes="100vw"
           className="object-cover object-[80%_center] md:object-[78%_center] lg:object-right"
         />
-        {/* Atmospheric gradient overlay matching Mayan Ivory site background tone ensuring seamless flow */}
+        {/* Atmospheric gradient overlay matching Travertine Cream site background tone ensuring seamless flow */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#F5EDE1]/95 via-[#F5EDE1]/80 via-50% to-transparent sm:bg-gradient-to-r sm:from-[#F5EDE1]/95 sm:via-[#F5EDE1]/75 sm:via-42% md:from-[#F5EDE1]/90 md:via-[#F5EDE1]/50 md:via-48% lg:via-50% md:to-transparent" />
       </div>
 
       {/* Hero Content Layer */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20 lg:pb-28 flex-1 flex flex-col justify-center">
         <div className="max-w-xl lg:max-w-2xl">
-          {/* Eyebrow in Mayan Gold */}
+          {/* Eyebrow in Roman Ochre Gold */}
           <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#C9932E]">
             {content.heroBadge || "STEP INTO THE WONDER OF THE MAYA WORLD"}
           </p>
 
           {/* Main Headline */}
           <h1 className="mt-2.5 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-bold leading-[1.1] tracking-tight text-[#2B2420]">
-            {content.heroHeading || "Chichen Itza Tour"}
+            {content.heroHeading || "Pompeii Entry Tickets and Guided Tour"}
           </h1>
 
           {/* Cursive / Calligraphy Script Subtitle */}
@@ -44,7 +44,7 @@ export default async function Hero() {
           <p className="mt-3.5 text-base sm:text-lg lg:text-[19px] text-[#1F1A16] font-semibold leading-relaxed max-w-xl">
             {content.heroSubheading
               ? content.heroSubheading.replace(/<[^>]+>/g, " ")
-              : "Discover the ancient marvel of Chichen Itza with expert local guides and unforgettable experiences."}
+              : "Book skip-the-line entry to Pompeii — the best-preserved ancient Roman city in the world — with instant mobile confirmation and free cancellation up to 24 hours before your visit."}
           </p>
 
           {/* Action Buttons */}
@@ -53,7 +53,7 @@ export default async function Hero() {
               href={content.heroCtaPrimaryHref || "#tours"}
               className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#2B2420] px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-sm transition-all duration-300 hover:bg-[#A8432B] hover:shadow-md hover:-translate-y-0.5"
             >
-              <span>{content.heroCtaPrimaryText || "EXPLORE TOURS"}</span>
+              <span>{content.heroCtaPrimaryText || "EXPLORE TICKETS"}</span>
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
 
@@ -61,7 +61,7 @@ export default async function Hero() {
               href={content.heroCtaSecondaryHref || "#tours"}
               className="group inline-flex items-center justify-center gap-2 rounded-lg border-2 border-[#2B2420] bg-white/40 md:bg-transparent px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#2B2420] backdrop-blur-sm transition-all duration-300 hover:bg-[#2B2420] hover:text-white hover:-translate-y-0.5"
             >
-              <span>{content.heroCtaSecondaryText || "VIEW PRIVATE TOURS"}</span>
+              <span>{content.heroCtaSecondaryText || "VIEW GUIDED TOURS"}</span>
             </a>
           </div>
 

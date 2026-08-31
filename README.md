@@ -1,17 +1,18 @@
-# Chichen Itza Tour & Tickets — Homepage (Next.js)
+# Pompeii Entry Tickets & Guided Tour — Homepage (Next.js)
 
-A GetYourGuide affiliate site for Chichen Itza tours and tickets — a
+A GetYourGuide affiliate site for Pompeii entry tickets and guided tours — a
 tour-first homepage (hero, trust badges, tour grid, price comparison, FAQ
 with schema) plus a full `/admin` content CMS, targeting the focus keyword
-"Chichen Itza Tour" in the title/H1/meta. Guided, self-guided, and combo
-(cenote add-on) tour types, by design.
+"Pompeii Entry Tickets and Guided Tour" in the title/H1/meta. Self-guided
+skip-the-line, guided, and combo (Herculaneum & Vesuvius) tour types, by
+design.
 
 ## 1. Install & run locally
 
 Requires Node.js 18.17+.
 
 ```bash
-cd chichen-itza
+cd pompeii-entry-tickets
 npm install
 npm run dev
 ```
@@ -41,8 +42,8 @@ designed to live in Neon Postgres so a non-technical editor can change it
 from `/admin` with the change going live immediately — no rebuild or
 redeploy.
 
-**Until you set up a database, the site falls back to the real Chichen
-Itza starter content baked into `/data` (tours, FAQs, homepage copy, and
+**Until you set up a database, the site falls back to the real Pompeii
+starter content baked into `/data` (tours, FAQs, homepage copy, and
 blog posts)** — so it's fully browsable and demo-ready out of the box.
 Saving changes from `/admin` won't persist anywhere until `DATABASE_URL` is
 set, though — the admin panel will show a "couldn't be reached" error on
@@ -70,19 +71,20 @@ the Users page.
 
 ## 5. Photography
 
-The hero and tour photography use real, free-to-use photos of El Castillo,
-the Chichen Itza archaeological site, and nearby cenotes from Unsplash
-(free for commercial use, no attribution required — credits are in a code
-comment at the top of `components/Hero.tsx`). Swap in your own or licensed
-photos of the actual tours/operators you're promoting whenever you have
-them — nothing beats real photos of the actual experience.
+The hero and tour photography use real, free-to-use photos of ancient
+Roman ruins, forum columns, mosaics, an amphitheatre, and Mount Vesuvius
+from Unsplash (free for commercial use, no attribution required — credits
+are in a code comment at the top of `components/Hero.tsx`). Swap in your
+own or licensed photos of the actual tours/operators you're promoting
+whenever you have them — nothing beats real photos of the actual
+experience.
 
 ## 6. Before you launch
 
 A few placeholders need your own real values before this goes live:
 
 - `lib/site.ts` → `SITE_URL` — set to whatever domain you actually connect
-  in Vercel (currently set to `bookchichenitzatour.com`).
+  in Vercel (currently set to `pompeiientrytickets.com`).
 - `app/layout.tsx` → the `G-XXXXXXXXXX` Google Analytics ID (two spots) —
   replace with this site's own GA4 measurement ID. Don't reuse another
   site's ID, or you'll mix both sites' traffic together.
@@ -93,4 +95,3 @@ A few placeholders need your own real values before this goes live:
 
 Standard Next.js App Router project — deploys as-is to Vercel, Netlify, or
 any Node host. `npm run build && npm run start` for a production build.
-# pompeii-entry

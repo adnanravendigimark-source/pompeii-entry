@@ -109,7 +109,7 @@ export default function TourForm({
             value={tour.id}
             onChange={(e) => update("id", e.target.value)}
             className={`${inputClass} ${!isNew ? "bg-stone-100 text-stone-500" : ""}`}
-            placeholder="e.g. chichen-itza-guided-day-trip"
+            placeholder="e.g. pompeii-skip-the-line-entrance-ticket"
           />
         </div>
         <div>
@@ -290,15 +290,15 @@ export default function TourForm({
       </div>
 
       <div>
-        <label className={labelClass}>Price table: "Meal Included" column (optional)</label>
+        <label className={labelClass}>Price table: "Guide Included" column (optional)</label>
         <input
           value={tour.priceTableFeature || ""}
           onChange={(e) => update("priceTableFeature", e.target.value)}
           className={inputClass}
-          placeholder="e.g. Yes — lunch or crêpe tasting"
+          placeholder="e.g. Yes — licensed archaeologist guide"
         />
         <p className="mt-1 text-xs text-stone-500">
-          Shown in the homepage price-comparison table's "Meal Included" column for this tour. Leave blank to show "No".
+          Shown in the homepage price-comparison table's "Guide Included" column for this tour. Leave blank to show "No".
         </p>
       </div>
 

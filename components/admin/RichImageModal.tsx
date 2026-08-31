@@ -198,7 +198,7 @@ export default function RichImageModal({
             type="text"
             value={alt}
             onChange={(e) => setAlt(e.target.value)}
-            placeholder="Describe what is shown in the image (e.g. El Castillo pyramid at Chichen Itza during sunrise)"
+            placeholder="Describe what is shown in the image (e.g. The Forum at Pompeii at sunrise)"
             className="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm focus:border-chichen-navy focus:outline-none focus:ring-1 focus:ring-chichen-navy"
           />
         </div>

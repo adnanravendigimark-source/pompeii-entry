@@ -17,9 +17,9 @@ export interface BlogSeoSettings {
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Chichen Itza Guides & Tips | Chichen Itza Tour & Tickets",
+  metaTitle: "Pompeii Guides & Tips | Pompeii Entry Tickets",
   metaDescription:
-    "Practical guides for touring Chichen Itza in Yucatan — guided vs. self-guided tours, best time to go, cenote add-ons, and more.",
+    "Practical guides for visiting Pompeii — ticket comparisons, best time to go, what to see, and more.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

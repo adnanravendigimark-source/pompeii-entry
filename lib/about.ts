@@ -18,33 +18,33 @@ export interface AboutPageContent {
 }
 
 const DEFAULT_CONTENT = `<h2>Our Mission</h2>
-<p>We built this independent guide with one mission: visiting Chichén Itzá is one of the most breathtaking cultural experiences in the world — but only if you book the right tour. With hundreds of operators in Cancun and Riviera Maya, prices and service quality vary dramatically.</p>
-<p>We are an independent booking resource — not an official Mexican government entity or INAH ticketing authority. We rigorously screen and compare verified guided excursions, early access admissions, and cenote day tours from licensed, top-rated local operators in Yucatan and Quintana Roo.</p>
-<h2>How We Screen & Select Chichén Itzá Tours</h2>
-<p>Every tour and excursion featured on this site is vetted against four strict criteria before earning a recommendation:</p>
+<p>We built this independent guide with one mission: Pompeii is one of the most extraordinary archaeological sites in the world — but only if you book the right ticket. With several ticket types and multiple booking partners to choose from, prices and inclusions vary dramatically.</p>
+<p>We are an independent booking resource — not the Parco Archeologico di Pompei or any Italian government body. We rigorously screen and compare verified skip-the-line tickets, guided tours, and combo tours with Herculaneum and Vesuvius, sold through trusted, established booking partners.</p>
+<h2>How We Screen & Select Pompeii Tickets</h2>
+<p>Every ticket and tour featured on this site is vetted against four strict criteria before earning a recommendation:</p>
 <ul>
-<li><strong>Certified Archeologist Guides</strong> — Every guided tour is led by an official INAH-certified bilingual guide with deep knowledge of ancient Mayan history, astronomy, and architecture.</li>
-<li><strong>Verified Traveler Reviews</strong> — We only recommend excursions with thousands of authentic, verified reviews and average ratings above 4.7 stars.</li>
-<li><strong>Transparent Pricing & Inclusions</strong> — What you see is what you pay: air-conditioned hotel transport, entrance fees, cenote access, and buffet meals are clearly stated upfront with zero hidden charges.</li>
-<li><strong>100% Free Cancellation</strong> — Every tour includes full flexibility with free cancellation up to 24 hours before your departure.</li>
+<li><strong>Genuine, Valid Tickets</strong> — Every ticket we list is sold through an established, verified booking partner and grants real entry to Pompeii.</li>
+<li><strong>Licensed Guides & Official Audio Tours</strong> — Every guided option uses a licensed archaeologist or the official Pompeii audio guide — never an unofficial guide.</li>
+<li><strong>Transparent Pricing & Inclusions</strong> — What you see is what you pay: guide, audio tour, and combo-ticket inclusions are clearly stated upfront with zero hidden charges.</li>
+<li><strong>Free Cancellation</strong> — Most tickets include flexibility with free cancellation up to 24 hours before your visit.</li>
 </ul>
 <h2>Independent Booking Resource</h2>
-<p>This website is an independent travel companion. We don't operate tour buses or sell tickets directly — all bookings go securely through GetYourGuide, a globally trusted partner, protected by official customer support and generous cancellation guarantees.</p>
+<p>This website is an independent travel companion. We don't operate the archaeological park or sell tickets directly — all bookings go securely through GetYourGuide, a globally trusted partner, protected by official customer support and generous cancellation guarantees.</p>
 <h2>Affiliate Disclosure</h2>
-<p>When you book a Chichen Itza Tour through links on our site, we may earn a modest affiliate commission at zero additional cost to you. This support allows us to maintain up-to-date travel guides and independent comparisons.</p>
-<p>Have questions before you book your trip? Feel free to reach out via our <a href="/contact">contact page</a>.</p>`;
+<p>When you book a Pompeii ticket through links on our site, we may earn a modest affiliate commission at zero additional cost to you. This support allows us to maintain up-to-date guides and independent comparisons.</p>
+<p>Have questions before you book your visit? Feel free to reach out via our <a href="/contact">contact page</a>.</p>`;
 
 const DEFAULT_ABOUT: AboutPageContent = {
   heroEyebrow: "About Us",
-  heroHeading: "Your Independent Guide to Chichen Itza Tours & Tickets",
+  heroHeading: "Your Independent Guide to Pompeii Entry Tickets",
   heroSubheading:
-    "We help travelers discover and book the best certified guided tours, skip-the-line admissions, and sacred cenote day trips across the Yucatan Peninsula.",
-  heroImage: "https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=2000&auto=format&fit=crop",
-  heroImageAlt: "El Castillo pyramid at Chichen Itza Mayan ruins",
+    "We help travelers discover and book the best Pompeii tickets — from skip-the-line entry to guided tours and combo tours with Herculaneum and Vesuvius.",
+  heroImage: "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2000&auto=format&fit=crop",
+  heroImageAlt: "Ancient Roman ruins and forum columns",
   content: DEFAULT_CONTENT,
-  metaTitle: "About Us | Chichen Itza Tour & Excursion Booking Guide",
+  metaTitle: "About Us | Pompeii Ticket Booking Guide",
   metaDescription:
-    "Learn about our independent travel guide, how we curate certified Chichen Itza guided tours and cenote day trips from Cancun and Riviera Maya.",
+    "Learn about our independent travel guide, and how we curate the best Pompeii entry tickets, guided tours, and combo tours with Herculaneum and Vesuvius.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

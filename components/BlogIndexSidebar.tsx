@@ -18,9 +18,9 @@ export default function BlogIndexSidebar({
   onSelectCategory,
   searchQuery,
   onSearchChange,
-  ctaHeading = "Ready to book your Chichen Itza Tour?",
+  ctaHeading = "Ready to book your Pompeii ticket?",
   ctaBody = "Best tour prices, certified archeologist guides, and free cancellation on most tickets.",
-  ctaButtonText = "Compare Chichen Itza Tours & Tickets →",
+  ctaButtonText = "Compare Pompeii Tickets & Tours →",
 }: {
   posts: Post[];
   categories: { name: string; count: number }[];

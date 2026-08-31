@@ -238,7 +238,7 @@ export default function PostForm({
                   value={post.title}
                   onChange={(e) => updateTitle(e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. Best Time to Visit Chichen Itza"
+                  placeholder="e.g. Best Time to Visit Pompeii"
                 />
               </Field>
 
@@ -261,7 +261,7 @@ export default function PostForm({
                       update("slug", slugify(e.target.value));
                     }}
                     className={`${inputClass} ${slugChanged ? "border-amber-400 bg-amber-50" : ""}`}
-                    placeholder="best-time-to-visit-chichen-itza"
+                    placeholder="best-time-to-visit-pompeii"
                   />
                 </Field>
                 <Field label="Category">
@@ -430,7 +430,7 @@ export default function PostForm({
                   value={post.focusKeyword}
                   onChange={(e) => update("focusKeyword", e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. best time to visit Chichen Itza"
+                  placeholder="e.g. best time to visit Pompeii"
                 />
               </Field>
               {focusChecklist && (

@@ -37,7 +37,7 @@ export default function BlogIndexContainer({
         <div className="mb-6">
           <h2 className="font-display text-2xl font-bold text-chichen-navy sm:text-3xl">Latest Guides</h2>
           <p className="mt-1.5 text-xs text-chichen-charcoal/80 sm:text-sm">
-            Expert tips, travel guides and everything you need to know about touring Chichen Itza in Yucatan.
+            Expert tips, ticket comparisons and everything you need to know about visiting Pompeii.
           </p>
         </div>
 

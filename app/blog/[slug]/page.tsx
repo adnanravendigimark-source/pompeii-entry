@@ -96,8 +96,8 @@ export default async function Post({ params }: { params: { slug: string } }) {
     datePublished: post.date,
     dateModified: post.updatedAt || post.date,
     url: `${SITE_URL}/blog/${post.slug}`,
-    authorName: "Chichen Itza Tour & Tickets",
-    siteName: "Chichen Itza Tour & Tickets",
+    authorName: "Pompeii Entry Tickets",
+    siteName: "Pompeii Entry Tickets",
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
