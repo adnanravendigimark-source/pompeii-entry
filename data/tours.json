@@ -1,0 +1,102 @@
+[
+  {
+    "id": "chichen-itza-cenote-valladolid-all-inclusive-tour",
+    "badge": "guided",
+    "ribbon": "Bestseller",
+    "title": "Chichén Itzá, Cenote Ik Kil & Valladolid All-Inclusive Day Tour",
+    "description": "The definitive Chichen Itza Tour experience — explore the iconic El Castillo pyramid with an expert archeologist guide, swim in the sacred underground waters of Cenote Ik Kil, and enjoy a traditional buffet lunch with a colonial stop in vibrant Valladolid.",
+    "includes": [
+      "Round-trip hotel transport from Cancun & Riviera Maya",
+      "Certified archeologist guided tour of Chichén Itzá",
+      "Admission to Cenote Ik Kil with swimming time",
+      "Full regional Yucatan buffet lunch",
+      "Walking tour of historic Valladolid colonial town"
+    ],
+    "duration": "10–12 hours",
+    "rating": 4.85,
+    "reviews": 24890,
+    "price": 69,
+    "originalPrice": 89,
+    "image": "/images/chichen-itza-hero.jpg",
+    "imageAlt": "The iconic El Castillo pyramid at Chichen Itza Mayan ruins under bright blue skies",
+    "hrefPath": "chichen-itza-l1668/chichen-itza-cenote-valladolid-all-inclusive-tour-t100001",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "First-time visitors wanting the complete Yucatan wonder: Ruins, Cenote & Colonial Town"
+  },
+  {
+    "id": "chichen-itza-early-access-archeologist-tour",
+    "badge": "guided",
+    "ribbon": "Skip the Crowds & Heat",
+    "title": "Chichén Itzá Early Access Tour with Archeologist Guide",
+    "description": "Enter the ancient Mayan capital before the tourist bus crowds and midday heat arrive. Gain intimate access to El Castillo, the Great Ball Court, and Temple of the Warriors with an expert bilingual archeologist.",
+    "includes": [
+      "Early priority entrance before general public crowds",
+      "Specialist certified bilingual archeologist guide",
+      "Intimate small-group tour experience",
+      "Complimentary bottled water & morning snack",
+      "Free cancellation up to 24 hours prior"
+    ],
+    "duration": "7–8 hours",
+    "rating": 4.92,
+    "reviews": 8410,
+    "price": 89,
+    "originalPrice": 115,
+    "image": "/images/warriors-temple.jpg",
+    "imageAlt": "El Castillo pyramid and ancient ruins at Chichen Itza in tranquil morning sunlight",
+    "hrefPath": "chichen-itza-l1668/chichen-itza-early-access-archeologist-tour-t100002",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Photographers & history enthusiasts who want pristine photos and zero crowds",
+    "priceTableFeature": "Yes — Early Morning Entry"
+  },
+  {
+    "id": "chichen-itza-coba-tulum-mayan-combo-tour",
+    "badge": "combo",
+    "ribbon": "Ultimate Archeology Combo",
+    "title": "Chichén Itzá, Cobá & Valladolid 3-in-1 Mega Tour",
+    "description": "The ultimate Yucatan archeological expedition — visit Chichen Itza's grand pyramid, climb jungle ruins, and discover the vibrant 16th-century colonial city of Valladolid with lunch included.",
+    "includes": [
+      "Admission & guided tours at Chichen Itza & Cobá",
+      "Comfortable air-conditioned coach transport",
+      "Authentic Yucatan buffet lunch included",
+      "Cenote swim stop to cool off",
+      "Certified multilingual archeologist guide"
+    ],
+    "duration": "12–13 hours",
+    "rating": 4.78,
+    "reviews": 5120,
+    "price": 119,
+    "originalPrice": 149,
+    "image": "/images/valladolid.jpg",
+    "imageAlt": "Colonial church and central plaza of Valladolid near Chichen Itza",
+    "hrefPath": "chichen-itza-l1668/chichen-itza-coba-tulum-mayan-combo-tour-t100003",
+    "hrefExtra": "",
+    "bestFor": "Active travelers wanting to cross off Mexico's top ancient Mayan sites in one trip",
+    "priceTableFeature": "Yes — 3 Ancient Cities"
+  },
+  {
+    "id": "chichen-itza-private-vip-guided-tour",
+    "badge": "private",
+    "ribbon": "Exclusive VIP Experience",
+    "title": "Private Chichén Itzá VIP Tour with Custom Itinerary & Luxury Transport",
+    "description": "Experience Chichen Itza entirely on your own schedule with a private luxury vehicle, dedicated private archeologist guide, personalized departure time, and hand-selected cenote dining away from tour groups.",
+    "includes": [
+      "Private luxury hotel pickup & drop-off",
+      "Dedicated private licensed archeologist guide",
+      "Flexible start time & custom-paced itinerary",
+      "Skip-the-line VIP priority entry tickets",
+      "Gourmet a la carte regional lunch & private cenote swim"
+    ],
+    "duration": "Flexible (approx 8–10 hours)",
+    "rating": 4.96,
+    "reviews": 1940,
+    "price": 185,
+    "originalPrice": 220,
+    "image": "/images/cenote-ik-kil.jpg",
+    "imageAlt": "Lush tropical cenote with hanging jungle vines and turquoise crystal clear water near Chichen Itza",
+    "hrefPath": "chichen-itza-l1668/chichen-itza-private-vip-guided-tour-t100004",
+    "hrefExtra": "",
+    "bestFor": "Families, couples & private groups seeking comfort, flexible timing and VIP service"
+  }
+]

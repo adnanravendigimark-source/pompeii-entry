@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Admin toast notifications */
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  background-color: #F5EDE1;
+  color: #2B2420;
+}
+
+/* Default brand-color CSS variables — space-separated RGB triplets.
+   Pompeii palette: terracotta/brick red (excavated ruin walls) as the
+   main brand/CTA color, Roman ochre gold as the accent, and volcanic
+   ash charcoal for dark text/backgrounds. --color-maya-emerald gets its
+   OWN variable (not aliased to --color-maya-forest) so that the admin
+   theme editor's "Secondary" color control — which writes to
+   --color-maya-emerald via buildThemeStyle() in app/layout.tsx — actually
+   takes effect on every maya-emerald-styled element (TopRides/WhyBookWithUs
+   etc.). Aliasing it to --color-maya-forest instead was a real bug found
+   across the sibling repos cloned from this same base template. */
+:root {
+  --color-maya-forest: 43 36 32; /* #2B2420 - Volcanic Ash Charcoal */
+  --color-maya-jungle: 168 67 43; /* #A8432B - Terracotta (lighter use) */
+  --color-maya-ivory: 245 237 225; /* #F5EDE1 - Travertine Cream */
+  --color-maya-gold: 201 147 46; /* #C9932E - Roman Ochre Gold ⭐ */
+  --color-maya-charcoal: 43 36 32; /* #2B2420 - Volcanic Ash Charcoal */
+  --color-gold-400: 217 160 102; /* #D9A066 - warm amber/sand accent */
+  --color-maya-emerald: 168 67 43; /* #A8432B - Terracotta ⭐ (main brand/CTA color) */
+
+  /* Compatibility aliases */
+  --color-chichen-navy: var(--color-maya-forest);
+  --color-chichen-gold: var(--color-maya-gold);
+  --color-chichen-charcoal: var(--color-maya-charcoal);
+}
+
+/* Shared typography for admin-entered rich text */
+.rich-content h1,
+.rich-content h2,
+.rich-content h3 {
+  font-family: var(--font-display), Georgia, ui-serif, serif;
+  font-weight: 600;
+  color: #2B2420;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  scroll-margin-top: 6rem;
+}
+.rich-content h1 {
+  font-size: 1.75em;
+}
+.rich-content h2 {
+  font-size: 1.5em;
+}
+.rich-content h3 {
+  font-size: 1.2em;
+}
+.rich-content p {
+  margin: 0.6em 0;
+  color: #2B2420;
+}
+.rich-content ul,
+.rich-content ol {
+  margin: 0.6em 0;
+  padding-left: 1.4em;
+}
+.rich-content ul {
+  list-style: disc;
+}
+.rich-content ol {
+  list-style: decimal;
+}
+.rich-content a {
+  color: #2B2420;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rich-content a.text-white,
+.rich-content a[class*="text-white"],
+.rich-content a[class*="bg-"] {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.rich-content strong {
+  font-weight: 700;
+  color: #2B2420;
+}
+.rich-content img {
+  max-width: 100%;
+  border-radius: 0.75rem;
+  margin: 0.75em 0;
+}
+.rich-content figure {
+  margin: 0.75em 0;
+}
+.rich-content figure img {
+  margin: 0;
+}
+.rich-content figcaption {
+  margin-top: 0.5em;
+  font-size: 0.85em;
+  color: rgba(38, 51, 45, 0.6);
+  text-align: center;
+}
+.rich-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.95em;
+}
+.rich-content table td,
+.rich-content table th {
+  border: 1px solid rgba(231, 217, 191, 0.6);
+  padding: 0.5em 0.75em;
+  text-align: left;
+}
+.rich-content table th {
+  background: rgba(220, 231, 220, 0.4);
+  color: #2B2420;
+  font-weight: 600;
+}
+
+.rich-content-invert,
+.rich-content-invert h1,
+.rich-content-invert h2,
+.rich-content-invert h3,
+.rich-content-invert a,
+.rich-content-invert strong,
+.rich-content-invert figcaption {
+  color: inherit;
+}
+
+.tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: rgba(120, 113, 108, 0.6);
+  pointer-events: none;
+}
+
+[data-rte-empty="true"]:before {
+  content: attr(data-placeholder);
+  color: rgba(38, 51, 45, 0.35);
+  pointer-events: none;
+}
