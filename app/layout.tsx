@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Cormorant_Garamond, Alex_Brush } from "next/font/google";
 import { SITE_URL } from "@/lib/site";
 import { resolveRobots } from "@/lib/seo";
@@ -25,11 +24,8 @@ const scriptFont = Alex_Brush({
 const DEFAULT_OG_IMAGE =
   "https://images.unsplash.com/photo-1687130818969-e8ea1c4ecc2b?q=80&w=2400&auto=format&fit=crop";
 
-// Google Analytics (GA4) measurement ID — PLACEHOLDER. Replace with this
-// site's own GA4 property ID before launch. Do not reuse another site's
-// ID or you'll mix both sites' traffic together (see README "Before you
-// launch").
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+// Google Analytics (GA4) measurement ID for pompeiientrytickets.com.
+const GA_MEASUREMENT_ID = "G-MDN44LPM8V";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -128,28 +124,25 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${displayFont.variable} ${scriptFont.variable}`}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `,
+          }}
+        />
         {/* Warms up the connection to Google's analytics domains ahead of
-            the afterInteractive gtag.js load below, shaving the DNS/TLS
-            handshake off its actual request instead of paying for it when
-            the script fires. */}
+            the gtag.js load above, shaving the DNS/TLS handshake off its
+            actual request instead of paying for it when the script fires. */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        {/* Google tag (gtag.js) */}
-        <Script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
       </head>
       <body className="font-body bg-stone-50 text-stone-900 antialiased">
         {themeStyle && <style dangerouslySetInnerHTML={{ __html: themeStyle }} />}
