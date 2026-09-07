@@ -77,7 +77,9 @@ function HeadsetIcon({ className = "h-7 w-7 text-[#243010]" }: { className?: str
 
 export default async function Hero() {
   const content = await getHomepageContent();
-  const heroImageSrc = "/images/pompeii-hero.jpg";
+  // Admin's "Hero photo" upload (Homepage → Images tab) overrides the
+  // bundled default image when set.
+  const heroImageSrc = content.heroImage || "/images/pompeii-hero.jpg";
 
   return (
     <section className="relative w-full min-h-[580px] lg:min-h-[660px] flex items-center bg-[#FAF9F6] overflow-hidden">
@@ -103,23 +105,23 @@ export default async function Hero() {
           <div className="inline-flex items-center gap-2.5">
             <LaurelWreathIcon className="h-6 w-6 text-[#B58A38] shrink-0" />
             <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#A67B2C]">
-              STEP BACK IN TIME. WALK THROUGH HISTORY.
+              {content.heroBadge}
             </span>
           </div>
 
-          {/* Main Headline */}
-          <h1 className="mt-3 font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-[#243010]">
-            Pompeii
-            <span className="block mt-1">Entry Tickets</span>
+          {/* Main Headline — admin-editable (Homepage → Content → Hero) */}
+          <h1 className="mt-3 whitespace-pre-line font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[72px] font-bold leading-[1.05] tracking-tight text-[#243010]">
+            {content.heroHeading}
           </h1>
 
           {/* Subtle Gold Divider */}
           <div className="w-12 h-[2.5px] bg-[#B58A38] mt-4 sm:mt-5 mb-4 sm:mb-5 rounded-full" />
 
-          {/* Subtitle / Description */}
-          <p className="text-sm sm:text-base lg:text-[17px] text-[#4A4E44] font-medium leading-relaxed max-w-xl">
-            Explore the ancient Roman city frozen in time by Mount Vesuvius. Book your official Pompeii tickets and enjoy a journey through 2,000 years of history.
-          </p>
+          {/* Subtitle / Description — rich text, admin-editable */}
+          <div
+            className="text-sm sm:text-base lg:text-[17px] text-[#4A4E44] font-medium leading-relaxed max-w-xl [&_a]:underline [&_strong]:text-[#243010]"
+            dangerouslySetInnerHTML={{ __html: content.heroSubheading }}
+          />
 
           {/* CTA Buttons */}
           <div className="mt-6 flex flex-wrap items-center gap-3.5">
@@ -131,10 +133,10 @@ export default async function Hero() {
               <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#what-to-expect"
+              href={content.heroCtaSecondaryHref || "#what-to-expect"}
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#243010]/30 bg-white/70 backdrop-blur-sm px-6 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider text-[#243010] shadow-sm transition-all duration-300 hover:bg-[#243010] hover:text-white"
             >
-              WHAT TO EXPECT
+              {content.heroCtaSecondaryText || "WHAT TO EXPECT"}
             </a>
           </div>
 
