@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import SaveBar from "./SaveBar";
-import RepeatableList from "./RepeatableList";
 import { useToast } from "./Toast";
 import type { HomepageContent } from "@/lib/homepage";
 import type { Tour } from "@/lib/data";
@@ -112,22 +111,6 @@ export default function RecommendedTourForm({
             placeholder="Best Price · Limited Availability"
           />
         </div>
-      </div>
-
-      <div>
-        <label className={labelClass}>Reasons to book this tour</label>
-        <p className="-mt-0.5 mb-2 text-xs text-stone-500">
-          Shown as a short checklist under the recommended tour's card on the homepage grid.
-        </p>
-        <RepeatableList<string>
-          items={content.featuredReasons}
-          onChange={(featuredReasons) => update("featuredReasons", featuredReasons)}
-          newItem={() => ""}
-          addLabel="+ Add reason"
-          renderItem={(item, upd) => (
-            <input value={item} onChange={(e) => upd(e.target.value)} className={inputClass} placeholder="e.g. Free cancellation up to 24 hours before" />
-          )}
-        />
       </div>
 
       <SaveBar saving={saving} disabled={!dirty} onCancel={handleCancel} />
