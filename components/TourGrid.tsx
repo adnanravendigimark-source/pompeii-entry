@@ -142,6 +142,16 @@ export default async function TourGrid() {
                         <LockIcon className="h-3 w-3" /> {homepage.featuredUrgencyText}
                       </p>
                     )}
+                    {isRecommended && homepage.featuredReasons.length > 0 && (
+                      <ul className="mt-3 space-y-1 border-t border-stone-100 pt-3">
+                        {homepage.featuredReasons.map((reason, i) => (
+                          <li key={i} className="flex items-start gap-1.5 text-[11px] text-stone-900/75">
+                            <span className="mt-0.5 shrink-0 text-chichen-gold">✓</span>
+                            <span>{reason}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>
